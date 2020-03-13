@@ -1,0 +1,23 @@
+
+
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">Project Medizon</h1>
+  <p class="lead">Online Delivery of the Medicines. The Proposal is focusing in E-Commerce.</p>
+  <p class="lead">Note: This project is just for the submission of the course project. This is not developed for any business purpose or internal or external benefits.</p>
+</div>
+
+<div class="container">
+  <div class="card-deck mb-3 text-center">
+    <ng-container *ngFor="let medicine of medicines, let i=index">
+      <div class="card mb-4 shadow-sm" *ngIf="i<3">
+        <div class="card-header" >
+          <h4 class="my-0 font-weight-normal">{{medicine.name}}</h4>
+        </div>
+        <div class="card-body">
+          <img src="/assets/{{medicine.image}}">
+          <button type="button" class="btn btn-lg btn-block btn-outline-primary" (click)="navigateToOrder($event, medicine._id)">Order Now</button>
+        </div>
+      </div>
+  </ng-container>
+  </div>
+</div>

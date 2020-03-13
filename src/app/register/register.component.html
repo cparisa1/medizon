@@ -1,0 +1,28 @@
+    <div id = "login-box">
+      <div class="left-box">
+
+        <h1>Sign Up</h1>
+        <form>
+        <input type = "text" name = "username" placeholder="Username" [(ngModel)]="username" ngModel/>
+        <input type = "text" name = "email" placeholder="Email" [(ngModel)]="email" ngModel/>
+        <input type = "password" name = "password" placeholder="password" [(ngModel)]="password" ngModel/>
+
+        <input type = "password" name = "password2" placeholder="Retypepassword" [(ngModel)]="password2" ngModel/>
+        <div class="btn-align">
+          <div>
+        <button class="btn btn-outline-primary" type = "submit" name = "signup-button" value="Sign Up" (click)="registerUser()">Sign Up</button></div></div>
+        </form>
+      </div>
+
+        <div class="right-box">
+
+          <span class ="signinwith">Sign in with Social Network<br/> 
+          </span>
+
+          <button class="social facebook">login with Facebook </button>
+          <button class="social twitter">login with Twitter </button>
+          <button class="social google">login with Google </button>
+
+        </div>
+
+      </div>   

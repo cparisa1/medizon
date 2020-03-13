@@ -1,0 +1,66 @@
+<div class= "pq">
+
+    <div align="middle">
+    <h1 style = "font-size:30px;">Cart Items</h1>
+    </div>
+
+
+  <div class="row" *ngFor = "let cart of sessionDetails; index as i">
+      
+      <div class="col-md-12">
+          
+        <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <img src="assets/{{cart?.image}}" alt="Neo citran" width="300px" height="300px">
+            
+            <div class="column">
+            <div class="card-body d-flex flex-column align-items-start">
+           <h2> <strong class="d-inline-block mb-2">{{cart?.name}}</strong></h2>
+            <h5 class="mb-0">
+                  <a class="input-group"> Quantity : &nbsp;{{cart?.quantityItem}}
+      
+                  <!---<input type="button" value="-" class="button-minus" (click)="dec(counter)" data-field="quantity">
+                  <input type="number" name="{{cart.name}}" class="quantity-field" [(ngModel)] ="cart.name" ngModel>
+                  <input type="button" value="+" class="button-plus" (click)="inc(counter)" data-field="quantity">-->
+                  <!--<select name="option">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                  -->
+                   
+
+                   </a>
+            
+            <div class="input-group">
+            <a>Price : &nbsp;</a>
+            <a>{{cart?.total_price}}</a>
+            </div>
+            <div class="input-group">
+                      
+              <h6 class="blueremove" (click)="deleteFromCart(i)" style="cursor: pointer;" >Remove</h6>
+            
+          </div>
+          </h5>
+
+           
+          </div>
+          
+          </div>
+          <!--<div class="ml-auto p-2">
+              <a align="right" href="">&times;</a></div>-->
+            </div>
+          
+      </div>
+      </div>
+      
+      <div align="right" >Grand Total : {{grand_total}}</div>
+
+      <div class="btn-align">
+      <div>
+
+            <button class ="btn btn-lg btn-block btn-outline-primary" type="button" (click)="updateCartToCheckout()">Proceed to Checkout</button>
+
+      </div>
+    </div>
+</div>

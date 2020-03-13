@@ -1,0 +1,20 @@
+<div class="text-center sign-w">
+    <form class="form-signin">
+  <!--<img class="mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">-->
+  <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+  
+  <label for="inputEmail" class="sr-only">Email address</label>
+  <input type="email" id="inputEmail" name = "semail" class="form-control" placeholder="Email" [(ngModel)]="semail" ngModel required autofocus>&nbsp;
+
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" id="inputPassword" name="spassword" class="form-control" placeholder="Password" [(ngModel)]="spassword" ngModel required>
+  <div class="checkbox mb-3">
+    <label>
+      <input type="checkbox" value="remember-me"> Remember me
+    </label>
+  </div>
+  <div class="btn-align">
+    <div>
+  <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="userSignIn()">Sign in</button></div></div>
+</form>
+</div>

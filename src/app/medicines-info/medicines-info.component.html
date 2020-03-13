@@ -1,0 +1,68 @@
+
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="container marketing">
+
+  <!-- Three columns of text below the carousel -->
+  <div class="row">
+
+    <div class="column">
+      <div class="col-lg-9">
+        <img src="/assets/{{medicineDetails?.image}}" width="350px" height="350px"> 
+            
+      </div>      
+    </div>
+    
+    <div class="allign-name">
+        <div class="card-body d-flex flex-column align-items-start">
+        <h2> <strong class="d-inline-block mb-2 text-primary">{{medicineDetails?.name}}</strong></h2>    
+        <div class="quantity-align">
+          Select Quantity &nbsp;
+          <select [(ngModel)]="selectedNumber" (ngModelChange)="onRowClick()" >
+              <option *ngFor="let n of [1,2,3,4,5]" value={{n}}>{{n}}</option>
+          </select>
+      </div>    
+        
+       </div>
+    </div>
+    
+ 
+    <div class="allign-name">
+        <div class="text-right">                         
+          <a class="btn btn-primary" role="button" (click)="addToCart()" style="color:white">Add to cart</a>
+        </div> 
+        </div> 
+   
+  </div><!-- /.row -->
+
+
+  <!-- START THE FEATURETTES -->
+
+  <hr class="featurette-divider">
+
+  <div class="row featurette">
+    <div class="col-md-7">
+      <h2 class="featurette-heading">Product Description </h2>
+      <p>This can be used to cure the following </p>
+      <ul>
+          <li *ngFor="let hero of medicineDetails?.desc">
+            {{ hero }}
+          </li>
+        </ul>
+    </div>
+  </div>
+
+  <hr class="featurette-divider">
+
+
+
+  
+
+  
+
+  <!-- /END THE FEATURETTES -->
+
+</div><!-- /.container -->

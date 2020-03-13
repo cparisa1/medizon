@@ -1,0 +1,47 @@
+
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <h3 class="my-0 mr-md-auto font-weight-normal"><a href="/">Project Medizon</a></h3>
+    <nav class="my-2 my-md-0 mr-md-3">
+      <a class="p-2 text-dark" href="/medicines">Medicines</a>
+      <a class="p-2 text-dark" href="/support">Contact Us</a>
+      <a class="p-2 text-dark" href="/cart">Cart</a>
+    </nav>
+    <a class="btn btn-outline-primary" *ngIf = "userName" href="/">Hello, {{userName}}</a>&nbsp;
+    <a class="btn btn-outline-primary" *ngIf = "userName" href="/" (click) =logout()>Logout</a>&nbsp;
+    <a class="btn btn-outline-primary" href="/register" *ngIf = "!userName">Register</a>
+    &nbsp;
+    <a class="btn btn-outline-primary" href="/signin" *ngIf = "!userName">Sign in</a>
+    &nbsp;
+    <!--<a class="btn btn-outline-primary" href="/checkout">Checkout</a>-->
+  </div>
+<router-outlet></router-outlet>
+<footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="row">
+      <div class="col-12 col-md">
+        <!--<img class="mb-2" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">-->
+        <small class="d-block mb-3 text-muted">&copy; Project Medizon 2019</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Features</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Prescribed</a></li>
+          <li><a class="text-muted" href="#">Non-Prescribed</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Resource</a></li>
+          <li><a class="text-muted" href="#">Final resource</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Team</a></li>
+          <li><a class="text-muted" href="#">Locations</a></li>
+          <li><a class="text-muted" href="#">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
